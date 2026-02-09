@@ -1,0 +1,89 @@
+# Agrupamento por módulos — Adianti Reports (Business Intelligence)
+
+- **Base**: `extracao-bi-p96-99.md` (itens 1–58 extraídos de `references/termo.pdf`, páginas 96–99)
+- **Objetivo**: organizar os requisitos em grupos funcionais normalmente associados ao **Adianti Reports** (conforme módulos/recursos do produto).
+
+> Observação: este agrupamento é **para análise de aderência** (ex.: checklist de cobertura por módulo). Não afirma, por si só, que cada item é ou não atendido pelo Adianti Reports sem validação técnica/contratual.
+
+## Segurança, conformidade, identidade e auditoria
+
+- **1.** Permitir a execução do sistema em ambiente Linux, com acesso via protocolo HTTPS e criptografia de ponta a ponta.
+- **2.** Permitir o armazenamento de senhas criptografadas, utilizando algoritmo seguro e política de senhas fortes.
+- **3.** Permitir o envio de notificação por e-mail em cada login realizado e garantir proteção contra ataques de força bruta, hijacking, fixation e injection (SQL/XSS/CSRF).
+- **4.** Permitir autenticação em dois fatores (2FA TOTP) para usuários do sistema.
+- **5.** Permitir integração com Active Directory (AD/LDAP) e login via Google Workspace (Google Business).
+- **6.** Assegurar conformidade com a Lei Geral de Proteção de Dados (LGPD).
+- **7.** Apresentar logs detalhados de todas as operações realizadas, incluindo acessos ao sistema, tentativas de login mal-sucedidas, execução de relatórios e dashboards, requisições via API, envio de e-mails e importações automáticas.
+- **8.** Permitir a definição de sistema de permissões granulares, por usuário individual, grupo institucional e tipo de conteúdo (relatório, dashboard, agendamento), com permissões estendidas de criar, editar, compartilhar e agendar.
+- **9.** Executar testes de segurança contínuos com base nas recomendações OWASP TOP 10 e MITRE CVE.
+- **35.** Registrar logs de geração, tempo de execução e e-mails enviados.
+- **46.** Permitir envio de conteúdo com login personificado, mantendo o contexto e as permissões do usuário.
+- **53.** Permitir login único (SSO) via API, Google ou AD/LDAP.
+- **54.** Garantir operação plena nos navegadores homologados, mediante testes de segurança e homologação prévia.
+
+## Fontes de dados, conectores e ingestão (ETL leve)
+
+- **10.** Permitir integração direta com bancos de dados relacionais (Oracle, SQL Server, PostgreSQL, MySQL, MariaDB, Sybase, Firebird e SQLite).
+- **11.** Permitir integração com bancos analíticos e de alta performance, como ClickHouse e AmazonRedshift.
+- **12.** Permitir comunicação com APIs e Web Services no formato REST (JSON), com autenticação e parâmetros dinâmicos.
+- **13.** Permitir importação de arquivos e planilhas nos formatos CSV, XLS, XLSX, ODS e integração com Google Planilhas.
+- **14.** Apresentar funcionalidade de importação direta de planilhas institucionais e logs de importação agendada.
+
+## Consultas, parâmetros e desempenho (modelagem/SQL)
+
+- **15.** Disponibilizar montador visual de consultas SQL (editor de tabelas) para criação de consultas personalizadas.
+- **24.** Permitir a definição de parâmetros padrão baseados em variáveis institucionais, como exercício e unidade gestora.
+- **47.** Permitir configuração de cache de consultas e parâmetros para otimização de desempenho.
+
+## Dashboards (designer, organização, interatividade e exibição)
+
+- **16.** Permitir a criação visual de dashboards, com suporte a múltiplos tipos de componentes analíticos e acompanhamento em tempo real dos indicadores institucionais.
+- **17.** Permitir o uso de editor visual com função drag and drop, possibilitando arrastar e redimensionar elementos.
+- **18.** Permitir a organização dos painéis por pastas temáticas e áreas de gestão, como Orçamento, Licitações, RH e Contabilidade.
+- **19.** Permitir a clonagem, movimentação e compartilhamento de dashboards entre usuários e grupos.
+- **20.** Permitir a inserção de objetos como gráficos, relatórios, mapas, infográficos e widgets externos (ex: próximas sessões, agenda do presidente, etc).
+- **21.** Permitir a utilização de camadas (layers) com controle de exibição e sobreposição de elementos.
+- **22.** Permitir a aplicação de filtros fixos, hierárquicos e dinâmicos, com redução automática de parâmetros conforme dados selecionados.
+- **23.** Permitir drilldown e drillthrough automáticos (ex: Despesa → Empenho → Fornecedor).
+- **25.** Permitir atualização automática configurável, com opções de refresh e rodízio entre painéis.
+- **26.** Permitir o modo de exibição pública em TVs institucionais, plenário e portais de transparência.
+- **27.** Permitir exportação de dashboards em imagem, PDF e envio por e-mail.
+- **42.** Permitir a utilização de redutores de filtros e widgets personalizados em HTML/JS.
+- **58.** Permitir exibição otimizada para painéis de TV e monitores públicos.
+
+## Relatórios e componentes analíticos (tabulares, pivots, gráficos, KPIs)
+
+- **28.** Permitir a criação e personalização de relatórios administrativos com foco em indicadores contábeis, orçamentários e de licitações.
+- **29.** Permitir a criação de relatórios com grupos, subgrupos, quebras e fórmulas personalizadas.
+- **30.** Permitir formatação condicional e totalizações automáticas nos relatórios.
+- **31.** Permitir a criação de relatórios dinâmicos (tabelas pivot interativas).
+- **32.** Permitir exportação de relatórios em múltiplos formatos: CSV, HTML, XLSX, ODS, PDF e RTF.
+- **33.** Permitir o envio automático de relatórios por e-mail institucional.
+- **36.** Permitir suporte a múltiplos tipos de objetos analíticos e visuais, como relatórios tabulares e tabelas dinâmicas.
+- **37.** Permitir a criação de gráficos nos formatos barra, linha, área, pizza, rosca, blocos, bolhas, dispersão, radar, sunburst e gantt.
+- **38.** Permitir a exibição de indicadores numéricos (KPI), analógicos (gauge) e circulares.
+- **39.** Permitir a criação de infográficos e funis de acompanhamento.
+- **40.** Permitir a criação de rankings e calendários interativos.
+- **41.** Permitir a criação de formulários para coleta de dados e inserção de metas (anuais, mensais e diárias).
+
+## Agendamentos e distribuição (envios, periodicidade e canais)
+
+- **34.** Permitir o agendamento de relatórios por usuário, grupo, secretaria ou comissão.
+- **43.** Permitir o agendamento automático de envio de relatórios e dashboards para usuários e grupos específicos.
+- **44.** Permitir a definição de periodicidade (diária, semanal, mensal) e parâmetros automáticos para os agendamentos.
+- **45.** Permitir entrega de relatórios via e-mail institucional e Telegram.
+
+## APIs e automação (integração/embeds/gestão)
+
+- **48.** Disponibilizar APIs REST documentadas e autenticadas para integração com sistemas internos e externos da Câmara Municipal.
+- **49.** Permitir integração via API REST de dashboards, com parâmetros e tokens de autenticação.
+- **50.** Permitir integração via API REST de usuários, com funções para criar, listar, editar, inativar e gerenciar grupos, permissões e unidades administrativas.
+- **51.** Permitir integração via API REST para geração de relatórios sob demanda e definição de formatos de saída (PDF, XLS, HTML).
+- **52.** Permitir integração via API REST para criação, ativação, desativação e listagem de agendamentos automáticos.
+
+## Compatibilidade e canais de acesso (navegador, responsivo, mobile)
+
+- **55.** Permitir compatibilidade com os navegadores Google Chrome e Mozilla Firefox, versões 120 a 144, além de outros baseados em Blink ou Gecko.
+- **56.** Disponibilizar interface 100% responsiva, adaptada para desktop, tablet e smartphone.
+- **57.** Disponibilizar aplicativo mobile para Android e iOS.
+

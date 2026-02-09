@@ -1,0 +1,11 @@
+services:
+  docs:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./docs:/docs:rw
+    environment:
+      # ajuda em alguns ambientes a manter file watching estável
+      - CHOKIDAR_USEPOLLING=true
