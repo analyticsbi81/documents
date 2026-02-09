@@ -4,12 +4,15 @@ Este grupo reúne requisitos de **compatibilidade de navegadores**, **responsivi
 
 ## Itens e explicação
 
-- **55.** Permitir compatibilidade com os navegadores Google Chrome e Mozilla Firefox, versões 120 a 144, além de outros baseados em Blink ou Gecko.  
+- **55.** Permitir compatibilidade com os navegadores Google Chrome e Mozilla Firefox, versões 120 a 144, além de outros baseados em Blink ou Gecko.
+  - **Caminho**: 
   - **Explicação**: o sistema deve funcionar nos navegadores homologados (incluindo engines modernas), reduzindo risco de incompatibilidade.
 
-- **56.** Disponibilizar interface 100% responsiva, adaptada para desktop, tablet e smartphone.  
+- **56.** Disponibilizar interface 100% responsiva, adaptada para desktop, tablet e smartphone.
+  - **Caminho**: 
   - **Explicação**: UI adaptável a diferentes tamanhos de tela sem perda de funcionalidade essencial.
 
-- **57.** Disponibilizar aplicativo mobile para Android e iOS.  
+- **57.** Disponibilizar aplicativo mobile para Android e iOS.
+  - **Caminho**: 
   - **Explicação**: app dedicado (ou solução equivalente acordada) para acesso em dispositivos móveis, com segurança e desempenho.
 

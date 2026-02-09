@@ -5,5 +5,6 @@ Este grupo reúne requisitos que impactam **performance** e **custo operacional*
 ## Itens e explicação
 
 - **47.** Permitir configuração de cache de consultas e parâmetros para otimização de desempenho.  
+  - **Caminho**: 
   - **Explicação**: armazenar resultados/execuções para acelerar painéis e relatórios, controlando validade/expiração do cache.
 

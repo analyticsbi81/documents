@@ -1,2 +1,2 @@
 - [Introdução](/)
-- [Grupos](/grupos/seguranca)
+- [Grupos](/grupos/fontes-dados)

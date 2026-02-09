@@ -10,4 +10,3 @@
   - [Desempenho](/grupos/desempenho)
   - [Compatibilidade](/grupos/compatibilidade)
   - [Segurança](/grupos/seguranca)
-

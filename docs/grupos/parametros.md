@@ -4,6 +4,7 @@ Este grupo foca em requisitos de **parametrização**: como o BI define valores 
 
 ## Itens e explicação
 
-- **24.** Permitir a definição de parâmetros padrão baseados em variáveis institucionais, como exercício e unidade gestora.  
+- **24.** Permitir a definição de parâmetros padrão baseados em variáveis institucionais, como exercício e unidade gestora.
+  - **Caminho**:   
   - **Explicação**: pré-definir filtros/variáveis “padrão” (ex.: ano vigente, órgão) para padronizar relatórios e reduzir erros.
 
