@@ -9,19 +9,22 @@ Este grupo cobre como o BI **se conecta** às fontes (bancos, APIs, arquivos/pla
   - **Explicação**: Conectores/driver para ler dados de SGBDs tradicionais, com autenticação e performance adequadas.
 
 - **11.** Permitir integração com bancos analíticos e de alta performance, como ClickHouse e AmazonRedshift.
-  - **Caminho**: 
+  - **Caminho**: Dados / Conexões [+ Criar Conector]
   - **Explicação**: suporte a motores analíticos/colunares e data warehouses comuns em BI.
 
 - **12.** Permitir comunicação com APIs e Web Services no formato REST (JSON), com autenticação e parâmetros dinâmicos.
-  - **Caminho**: 
+  - **Caminho**: Dados / Importar de API
   - **Explicação**: consumir dados via REST, inclusive com headers/tokens e parâmetros variáveis (datas, filtros, paginação).
 
 - **13.** Permitir importação de arquivos e planilhas nos formatos CSV, XLS, XLSX, ODS e integração com Google Planilhas.
-  - **Caminho**: 
+  - **Caminho**: Dados / Conexões [+ Criar Conector]
   - **Explicação**: importar dados “tabulares” de arquivos e também conectar a planilhas online.
 
 - **14.** Apresentar funcionalidade de importação direta de planilhas institucionais e logs de importação agendada.
-  - **Caminho**: 
+  - **Caminho**: Dados / Importar Planilha
+  - **Caminho**: Dados / Criar Agendamento
+  - **Caminho**: Dados / Gerenciar Agendamentos
+  - **Caminho**: Logs / Importações de planilhas
   - **Explicação**: automatizar ingestão recorrente de planilhas (com histórico/logs para auditoria e troubleshooting).
 
 - **15.** Disponibilizar montador visual de consultas SQL (editor de tabelas) para criação de consultas personalizadas.
