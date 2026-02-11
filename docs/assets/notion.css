@@ -53,6 +53,130 @@
   --search-input-border-radius: 10px;
 }
 
+/* Tema escuro estilo Notion (notion-dark) */
+[data-theme="dark"] {
+  --theme-color: #e0e0e0;
+  --base-color: #e0e0e0;
+  --base-background-color: #191919;
+
+  --link-color: #58a6ff;
+  --link-text-decoration: none;
+  --link-text-decoration--hover: underline;
+
+  --sidebar-background: #252525;
+  --sidebar-border-color: rgba(255, 255, 255, 0.1);
+
+  --heading-color: #e0e0e0;
+
+  --code-inline-color: #e0e0e0;
+  --code-inline-background: rgba(255, 255, 255, 0.1);
+
+  --code-theme-background: #2d2d2d;
+  --code-theme-text: #e0e0e0;
+
+  --blockquote-border-color: rgba(255, 255, 255, 0.15);
+  --blockquote-background: rgba(255, 255, 255, 0.05);
+
+  --table-head-background: rgba(255, 255, 255, 0.06);
+  --table-row-border-color: rgba(255, 255, 255, 0.08);
+
+  --search-input-background-color: #2d2d2d;
+  --search-input-border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sidebar ul li.active > a {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Busca e ícone do GitHub no tema escuro */
+[data-theme="dark"] .sidebar .search input {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .sidebar .search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .sidebar .search {
+  color: #e0e0e0;
+}
+
+/* Ícone de lupa (nativo do input[type="search"] em WebKit) */
+[data-theme="dark"] .sidebar .search input::-webkit-search-decoration,
+[data-theme="dark"] .sidebar .search input::-webkit-search-results-button,
+[data-theme="dark"] .sidebar .search input::-webkit-search-results-decoration {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+/* Ícone de lupa (SVG ou ícone adicionado pelo tema) */
+[data-theme="dark"] .sidebar .search svg {
+  fill: #e0e0e0;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .sidebar .search .icon,
+[data-theme="dark"] .sidebar .search [class*="icon"] {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .sidebar .search img {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .sidebar-footer .sidebar-footer-icon,
+[data-theme="dark"] .sidebar-footer img {
+  filter: invert(1);
+}
+
+/* Navbar: desloca 1cm para a esquerda para não sobrepor o ícone de tema */
+.app-nav {
+  margin-right: 1cm;
+}
+
+/* Botão toggle de tema no canto superior direito */
+.theme-toggle-btn {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: var(--sidebar-background, #fbfbfa);
+  color: var(--base-color, #2f3437);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--code-inline-background, rgba(135, 131, 120, 0.15));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--link-color);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
 /* Ajustes finos “Notion-like” */
 body {
   -webkit-font-smoothing: antialiased;
@@ -85,6 +209,32 @@ body {
 .sidebar ul li.active > a {
   background: rgba(55, 53, 47, 0.08);
   font-weight: 600;
+}
+
+/* Rodapé da sidebar com ícone do GitHub */
+.sidebar-footer {
+  margin-top: 2rem;
+  padding: 16px 16px 24px;
+  border-top: 1px solid var(--sidebar-border-color);
+  position: sticky;
+  bottom: 0;
+  background: var(--sidebar-background);
+}
+
+.sidebar-footer a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--base-color);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.sidebar-footer a:hover {
+  opacity: 1;
+}
+
+.sidebar-footer-icon {
+  display: block;
 }
 
 .markdown-section {
